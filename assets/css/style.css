@@ -5,50 +5,43 @@
     font-family: CoolWonder;
     src: url(./Coolwonder-lGyX.ttf)
 }
+@keyframes animate-lines {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 40px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .container .box {
+      width: 200px;
+      height: 200px;
+    }
+}
+ @media only screen and (max-width: 480px) {
+    .container .box {
+      width: 150px;
+      height: 150px;
+    }
+}
 
 * {
     box-sizing: border-box;
-}
-
-.university-of-greenwich {
-    font-family: 'CoolWonder';
-    text-decoration: none
-}
-
-.social-icon ul li {
-    margin-right: 15px;
-}
-
-.social-icon ul svg {
-    fill: #6e6e6e;
-    width: 32px;
-    height: 32px;
-    color: #6e6e6e;
-    stroke-width: 0 !important;
-    transition: .3s;
-}
-
-.social-icon ul {
-    display: flex;
-    align-items: center;
-    margin: 0;
     padding: 0;
-    list-style: none;
-}
-
-.social-icon ul li {
-    display: block;
-    position: relative;
-    transition: all .3s ease
-}
-.social-icon ul li svg:hover {
-    top: 50%;
-    transform: translateY(-20%)
+    margin: 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:var(--text-color)
 }
 
 body    {
-    background-color:#191c26;
-}
+    display: flex;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+  }
 
 h1      {
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -72,6 +65,107 @@ p       {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size:24px;
     color:var(--text-color);
+}
+
+/* class */
+
+.layout {
+    width: 100%;
+  
+    display: grid;
+    grid:
+      "header" auto
+      "main" 1fr
+      "footer" auto
+      / 1fr;
+    gap: 8px;
+  }
+
+.header { grid-area: header; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }  
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      45deg,
+      #00f376 10%,
+      transparent 10%,
+      transparent 50%,
+      #00f376 50%,
+      #00f376 60%,
+      transparent 60%,
+      transparent 100%
+    );    
+    background-size: 40px 40px;
+    transform: rotate(calc(var(--i) * 90deg));
+    z-index: -1;
+    animation: animate-lines 8s linear infinite; /* Slow animation */
+}
+
+.main {
+    position: relative;
+    display:block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    background-color: #002B36;
+    border-radius: 30px;
+    max-width: fit-content;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 40px;
+    text-align: left;
+}
+
+.university-of-greenwich {
+    font-family: 'CoolWonder';
+    text-decoration: none
+}
+
+.social-icon ul li {
+    margin-right: 15px;
+    display: block;
+    position: relative;
+    transition: all .3s ease
+}
+
+.social-icon ul svg {
+    fill: #6e6e6e;
+    width: 32px;
+    height: 32px;
+    color: #6e6e6e;
+    stroke-width: 0 !important;
+    transition: .3s;
+}
+
+.social-icon ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-icon ul li svg:hover {
+    top: 50%;
+    transform: translateY(-20%);
+    fill: #ffffff;
+}
+
+.edu-list h4 label, .resume-box-01 h4 label, .skills h4 label {
+    background: #323232;
+    display: inline-block;
+    padding: 7px 18px;
+    border-radius: 4px;
+    margin: 0;
+    font-weight: 475;
 }
 
 a:link {
