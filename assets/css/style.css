@@ -94,11 +94,11 @@ body::before {
     height: 100%;
     background: linear-gradient(
       45deg,
-      #00f376 10%,
+      #63707d   10%,
       transparent 10%,
       transparent 50%,
-      #00f376 50%,
-      #00f376 60%,
+      #63707d   50%,
+      #63707d   60%,
       transparent 60%,
       transparent 100%
     );    
@@ -115,12 +115,12 @@ body::before {
     align-items: center;
     width: 100%;
     height: 80%;
-    background-color: #002B36;
+    background-color: #191c26;
     border-radius: 30px;
     max-width: fit-content;
     margin-left: 15%;
     margin-right: 15%;
-    padding: 40px;
+    padding: 50px;
     text-align: left;
 }
 
@@ -162,10 +162,10 @@ body::before {
 .edu-list h4 label, .resume-box-01 h4 label, .skills h4 label {
     background: #323232;
     display: inline-block;
-    padding: 7px 18px;
-    border-radius: 4px;
-    margin: 0;
-    font-weight: 475;
+    padding: 9px 22px;
+    border-radius: 6px;
+    font-weight: 480;
+    font-size: 18px;
 }
 
 a:link {
