@@ -76,7 +76,6 @@ p       {
 
 .layout {
     width: 100%;
-  
     display: grid;
     grid:
       "header" auto
@@ -106,9 +105,8 @@ p       {
 .footer { 
   grid-area: footer; 
   width: auto;
-  height: auto;
   background-color: transparent;
-  height: 50px; /* Ensure it's around 20px */
+  height: 50px;
   display:block;
   justify-content: center;
   align-items: center;
